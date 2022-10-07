@@ -27,11 +27,11 @@ with open('../res/pred/Armos3NetPred.pkl', 'rb') as f:
     
 loc, scale = emosnet_pred[...,0], emosnet_pred[...,1]
 emosnet_samples = EmosSample(loc, scale, n_samples=100)
-emosnet_samples = schaake_shuffle(val_tag, emosnet_samples, tag, obs)
+# emosnet_samples = schaake_shuffle(val_tag, emosnet_samples, tag, obs)
 
 loc, scale = lstmemosnet_pred[...,0], lstmemosnet_pred[...,1]
 lstmemosnet_samples = EmosSample(loc, scale, n_samples=100)
-lstmemosnet_samples = schaake_shuffle(val_tag, lstmemosnet_samples, tag, obs)
+# lstmemosnet_samples = schaake_shuffle(val_tag, lstmemosnet_samples, tag, obs)
 
 loc, scale, phi = armos1net_pred[...,:49], armos1net_pred[...,49:-1], armos1net_pred[-1:]
 armos1net_samples = ArmosSample(loc, scale, phi, n_samples=100)
