@@ -66,9 +66,9 @@ armos3_score_ss = {'LS':[],'ES':[],'VS':[]}
 w = 0.5**np.array([[np.abs(i-j)-1 for i in range(49)] for j in range(49)], dtype='float32')
 
 emos_samples  = emos.schaake_shuffle(val_tag, val_var, val_S2, tag, obs, n_samples=30)
-armos1_samples = armos1.sample(val_var, val_S2, n_samples=40)
-armos2_samples = armos2.sample(val_var, val_S2, n_samples=40)
-armos3_samples = armos3.sample(val_var, val_S2, n_samples=40)
+armos1_samples = armos1.sample(val_var, val_S2, n_samples=30)
+armos2_samples = armos2.sample(val_var, val_S2, n_samples=30)
+armos3_samples = armos3.sample(val_var, val_S2, n_samples=30)
 armos1_samples_ss = schaake_shuffle(val_tag, armos1_samples, tag, obs)
 armos2_samples_ss = schaake_shuffle(val_tag, armos2_samples, tag, obs)
 armos3_samples_ss = schaake_shuffle(val_tag, armos3_samples, tag, obs)
