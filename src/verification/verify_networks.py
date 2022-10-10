@@ -50,42 +50,42 @@ armos3net_samples = ArmosSample(loc, scale, phi, n_samples=100)
 net_results = {
     'EmosNet':{
         'LS':EmosLS(val_obs, emosnet_pred).numpy().mean() * 49,
-        'ES':energy_score(emosnet_samples, val_obs).mean(),
+        'ES':energy_score(emosnet_samples[:30], val_obs).mean(),
         'VS':variogram_score(emosnet_samples[:30], val_obs).mean()
     },
     'LstmEmosNet':{
         'LS':EmosLS(val_obs, lstmemosnet_pred).numpy().mean() * 49,
-        'ES':energy_score(lstmemosnet_samples, val_obs).mean(),
+        'ES':energy_score(lstmemosnet_samples[:30], val_obs).mean(),
         'VS':variogram_score(lstmemosnet_samples[:30], val_obs).mean()
     },
     'Armos1Net':{
         'LS':Armos1LS(val_obs, armos1net_pred).numpy().mean() * 49,
-        'ES':energy_score(armos1net_samples, val_obs).mean(),
+        'ES':energy_score(armos1net_samples[:30], val_obs).mean(),
         'VS':variogram_score(armos1net_samples[:30], val_obs).mean()
     },
     'Armos2Net':{
         'LS':Armos2LS(val_obs, armos2net_pred).numpy().mean() * 49,
-        'ES':energy_score(armos2net_samples, val_obs).mean(),
+        'ES':energy_score(armos2net_samples[:30], val_obs).mean(),
         'VS':variogram_score(armos2net_samples[:30], val_obs).mean()
     },
     'Armos3Net':{
         'LS':Armos3LS(val_obs, armos3net_pred).numpy().mean() * 49,
-        'ES':energy_score(armos3net_samples, val_obs).mean(),
+        'ES':energy_score(armos3net_samples[:30], val_obs).mean(),
         'VS':variogram_score(armos3net_samples[:30], val_obs).mean()
     },
     'Armos1NetSS':{
         'LS':Armos1LS(val_obs, armos1net_pred).numpy().mean() * 49,
-        'ES':energy_score(armos1net_samples_ss, val_obs).mean(),
+        'ES':energy_score(armos1net_samples_ss[:30], val_obs).mean(),
         'VS':variogram_score(armos1net_samples_ss[:30], val_obs).mean()
     },
     'Armos2NetSS':{
         'LS':Armos2LS(val_obs, armos2net_pred).numpy().mean() * 49,
-        'ES':energy_score(armos2net_samples_ss, val_obs).mean(),
+        'ES':energy_score(armos2net_samples_ss[:30], val_obs).mean(),
         'VS':variogram_score(armos2net_samples_ss[:30], val_obs).mean()
     },
     'Armos3NetSS':{
         'LS':Armos3LS(val_obs, armos3net_pred).numpy().mean() * 49,
-        'ES':energy_score(armos3net_samples_ss, val_obs).mean(),
+        'ES':energy_score(armos3net_samples_ss[:30], val_obs).mean(),
         'VS':variogram_score(armos3net_samples_ss[:30], val_obs).mean()
     }   
 }
